@@ -13,7 +13,7 @@ This is a network testing sytem using MoonGen packet generator.
 
 #### System Input
 
-The message format of the UDP packet received by moongen-agent-v2.py is: <NS input endpoint IP>:<NS output endpoint IP>:<Test bandwidth>:<Test execution time>:<Test ID>:<MoonGen outbound traffic port>:<Moongen inbound traffic port>
+The message format of the UDP packet received by moongen-agent-v2.py is: NS input endpoint IP:NS output endpoint IP:Test bandwidth:Test execution time:Test ID:MoonGen outbound traffic port:Moongen inbound traffic port
 
 Examples
 
