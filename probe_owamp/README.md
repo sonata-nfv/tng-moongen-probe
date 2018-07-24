@@ -1,11 +1,47 @@
-# tng-probes
+# OWAMP (one-way active measurement protocol) to Prometheus
+OWAMP needs to be installed on both hosts taking part in the measurement. The owamp-prometheus-exporter should be installed at the destination host. From there when run, the source host of the one-way-ping can be chosen as an argument.
 
-README GIA OWAMP
+Configure apt (as user “root”):
 
-[Media Net Lab - NCSR Demokritos](http://www.medianetlab.gr/)
+    wget -P /etc/apt/sources.list.d/ http://downloads.perfsonar.net/debian/perfsonar-jessie-release.list
+    wget -qO - http://downloads.perfsonar.net/debian/perfsonar-debian-official.gpg.key | apt-key add -
 
-License
-----
 
-tng-probes is published under Apache 2.0 license. Please see the LICENSE file for more details.
+Install perfsonar suite, which includes owampd and then run the “install-optional-packages.py” script :
+
+    apt update
+    apt install perfsonar-tools
+
+Clone the repository
+
+    git clone 
+
+Install dependencies with pip (using virtual environment is recommended)
+
+    cd owamp-prometheus-exporter
+    pip install -r requirements
+
+Run the exporter:
+
+    python3 main.py {SOURCE_HOST_IP}
+
+SOURCE_HOST_IP should be an IP whose host has the package “perfsonar-tools” installed.
+
+
+Setup Prometheus to monitor the owamp exporter
+ In “scrape_config” field add the following:
+
+      - job_name: 'owamp'
+        scrape_interval: 10s
+        scrape_timeout:  10s
+        static_configs:
+          - targets: ['10.100.160.45:9101'] # IP and PORT where owamp-prometheus-exporter is exposed
+
+Reload Prometheus (or kill -H {pid}):
+
+    systemctl reload prometheus
+
+*Log rotation not currently implemented, you can use this in cron:
+
+    /usr/bin/find /path/to/owamp-prometheus-exporter/powstream_log_dir -mmin +5 ! -name .powlock -delete
 
