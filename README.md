@@ -2,9 +2,16 @@
 
 <p align="center"><img src="https://github.com/sonata-nfv/tng-api-gtw/wiki/images/sonata-5gtango-logo-500px.png" /></p>
 
-GENIKO README
+# Description
 
-[Media Net Lab - NCSR Demokritos](http://www.medianetlab.gr/)
+The probes in this repository are developed and maintained by [Media Net Lab - NCSR Demokritos](http://www.medianetlab.gr/).
+
+There are 3 different probes at the moment:
+  - moongen
+  - uperf
+  - owamp
+
+ 
 
 License
 ----
