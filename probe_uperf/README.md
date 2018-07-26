@@ -1,10 +1,13 @@
-# tng-probes
+# uperf probe
 
 <p align="center"><img src="https://github.com/sonata-nfv/tng-api-gtw/wiki/images/sonata-5gtango-logo-500px.png" /></p>
 
-README GIA UPERF
+#### Description
 
-[Media Net Lab - NCSR Demokritos](http://www.medianetlab.gr/)
+This is a network probe based on uperf network performance tool (http://uperf.org/).
+
+It is still under development and it will be available soon.
+
 
 License
 ----
