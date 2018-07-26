@@ -1,1 +1,0 @@
-Flow{"chris", Packet.Udp{ethSrc = txQueue(),ethDst = arp("10.1.0.10"),ip4Src = ip"10.0.0.10",ip4Dst = ip"10.1.0.10",udpSrc = 1234,udpDst = 319,pktLength = 1300},timestamp = true}
