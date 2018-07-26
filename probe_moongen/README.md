@@ -5,13 +5,14 @@
 
 #### Description
 
-The MoonGen probe is based on the MoonGen packet generator. It is fully scriptable and it works on high speeds, thus making it suitable for testing various network services. Specific tests for latency and bandwidth are available for the 5G-TANGO V&V Platform. This probe comes with a wrapper API that makes using the MoonGen packet generator automatic and easy.
+The MoonGen probe is based on the MoonGen packet generator. It is fully scriptable and it works on high speeds, thus making it suitable for testing various network services. Specific tests for latency and bandwidth are available for the 5G-TANGO V&V Platform. This probe comes with a wrapper API that makes using the MoonGen packet generator automatic and easy. Also there is an automatic openflow-based way to perform traffic steering in OpenStack to guide the generated traffic toward and form the network service that is under test.
 
 #### Files
 
   - moongen-agent-v3.py is used to manage the MoonGen packet generator, run the test and send the results to the appropriate database.
   - kristo.lua is the actual test that will be run on the system under test.
   - moongenstart.php and moongendone.php are the files that implement the API that is used to communicate with the moongen probe.
+  - mg-agentMOONGEN.py is used to apply the SDN rules in the OpenStack in order to perform traffic steering to the network service under test.
 
 #### System Input
 
@@ -50,7 +51,15 @@ To run moongen-agent-v3.py in the background use:
 $ nohup python moongen-agent-v3.py &
 ```
 
-The files in php-scripts folder must be available under a webserver (eg. Apache)
+The files in php-scripts folder must be available under a webserver in the moongen machine. (eg. Apache)
+
+mg-agentMOONGEN.py need to be in the OpenStack machine and must be edited in order to have the correct port interfaces for the OpenStack deployemnt.
+
+To run mg-agentMOONGEN.py in the background use:
+
+```sh
+$ nohup python mg-agentMOONGEN.py &
+```
 
 
 License
