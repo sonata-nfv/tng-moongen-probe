@@ -5,12 +5,25 @@
 
 # Description
 
-  - moongen-agent-v3.py is used to receive the start test command with test parameters and to send the results back to the the entity that started the test.
-  - kristo.lua is the test the actual test that will be run on the system.
+
+#### Files
+
+  - moongen-agent-v3.py is used to manage the MoonGen packet generator, run the test and send the results to the appropriate database.
+  - kristo.lua is the actual test that will be run on the system under test.
+  - moongenstart.php and moongendone.php are the files that implement the API that is used to communicate with the moongen probe.
 
 #### System Input
 
-To invoke
+To invoke a test a REST HTTP POST request is needed. This can be done easily by CURL or POSTMAN. The body of the POST request must be JSON and have the following format as the example: {"ingressIP":"10.0.0.100", "egressIP":"10.0.0.131", "testBandwidth":"10", "testTime":"10", "testID":"mytestid17", "moongenOutput":"2", "moongenInput":"3", "testType":"simple"}
+
+  - ingressIP
+  - egressIP
+  - testBandwidth
+  - testTime
+  - testID
+  - moongenOutput
+  - moongenInput
+  - testType -> dasd
 
 #### System output
 
