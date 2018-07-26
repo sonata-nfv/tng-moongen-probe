@@ -5,7 +5,7 @@
 
 #### Description
 
-
+The MoonGen probe is based on the MoonGen packet generator. It is fully scriptable and it works on high speeds, thus making it suitable for testing various network services. Specific tests for latency and bandwidth are available for the 5G-TANGO V&V Platform. This probe comes with a wrapper API that makes using the MoonGen packet generator automatic and easy.
 
 #### Files
 
