@@ -87,7 +87,7 @@ def runTest(var0, var1,var2,var3,var4,var5):
         print "sending json to orch"
         #ssh_client = paramiko.SSHClient()
         #ssh_client.load_system_host_keys()
-        #ssh_client.connect('aias.iit.demokritos.gr', username='xilouris', password='<czx1.4>')
+        #ssh_client.connect('aias.iit.demokritos.gr', username='myusername', password='mypassword')
 
         #with scpclient.closing(scpclient.Write(ssh_client.get_transport(), '.')) as scp:
         #    scp.send_file(data2[4]+'.json', remote_filename=data2[4]+'.json')
