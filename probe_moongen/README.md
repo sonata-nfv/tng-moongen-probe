@@ -3,7 +3,8 @@
 <p align="center"><img src="https://github.com/sonata-nfv/tng-api-gtw/wiki/images/sonata-5gtango-logo-500px.png" /></p>
 
 
-# Description
+#### Description
+
 
 
 #### Files
@@ -14,22 +15,24 @@
 
 #### System Input
 
-To invoke a test a REST HTTP POST request is needed. This can be done easily by CURL or POSTMAN. The body of the POST request must be JSON and have the following format as the example: {"ingressIP":"10.0.0.100", "egressIP":"10.0.0.131", "testBandwidth":"10", "testTime":"10", "testID":"mytestid17", "moongenOutput":"2", "moongenInput":"3", "testType":"simple"}
+To invoke a test a REST HTTP POST request at 10.30.0.253/moongenstart.php is needed. This can be done easily by CURL or POSTMAN. The body of the POST request must be JSON and have the following format as the example: {"ingressIP":"10.0.0.100", "egressIP":"10.0.0.131", "testBandwidth":"10", "testTime":"10", "testID":"mytestid17", "moongenOutput":"2", "moongenInput":"3", "testType":"simple"}
 
-  - ingressIP
-  - egressIP
-  - testBandwidth
-  - testTime
-  - testID
-  - moongenOutput
-  - moongenInput
-  - testType -> dasd
+  - ingressIP: ingress IP endpoint of the service under test
+  - egressIP: egress IP endpoint of the service under test
+  - testBandwidth: bandwidth of the test that will be executed
+  - testTime: time in seconds that the test will be executed
+  - testID: random ID of the test to be executed
+  - moongenOutput: moongen port used to send packets
+  - moongenInput: moongen port used to receive packets
+  - testType: This has 2 options, simple/rfc, meaning 2 different tests
 
 #### System output
 
-A JSON file is produced containing all the measurements of the test. This file is sent to a web server to be available for further usage. To see the format of the JSON file, there are 2 examples in the folder named results.
+To get the status of a test and some basic measurements there is a GET request in the following format: 10.30.0.253/moongendone.php?tid=mytestid17&ingressip=10.0.0.100&egressip=10.0.0.131
 
-# Requirements
+Also a JSON file is produced containing all the measurements of the test. This file is sent to a mongoDB in order to be stored and be available for further analysis. To see the format of the JSON file, there are 2 examples in the folder named results.
+
+#### Requirements
 
   - A machine with DPDK installed
   - MoonGen packet generator installed
@@ -37,7 +40,7 @@ A JSON file is produced containing all the measurements of the test. This file i
   - Apache2 with PHP enabled
   - An SDN/NFV infrastructure based on OpenStack and SONATA platform
 
-# Installation
+#### Installation
 
 moongen-agent-v3.py and moongentest.lua need to be in the folder of MoonGen. moongen-agent-v3.py needs to be edited in order to have correct IP and PORT depending on the configuration of your network.
 
@@ -46,6 +49,8 @@ To run moongen-agent-v3.py in the background use:
 ```sh
 $ nohup python moongen-agent-v3.py &
 ```
+
+The files in php-scripts folder must be available under a webserver (eg. Apache)
 
 
 License
