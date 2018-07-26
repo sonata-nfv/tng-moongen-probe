@@ -12,6 +12,7 @@ There are 3 different probes at the moment:
   - owamp
 
  They are part of the V&V sandbox enviroment of 5G-TANGO and they are used to test the Network Services that are deployed.
+ Check each respective folder for additional information and documentation.
 
 License
 ----
