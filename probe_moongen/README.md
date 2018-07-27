@@ -25,7 +25,7 @@ To invoke a test a REST HTTP POST request at 10.30.0.253/moongenstart.php is nee
   - testID: random ID of the test to be executed
   - moongenOutput: moongen port used to send packets
   - moongenInput: moongen port used to receive packets
-  - testType: This has 2 options, simple and [RFC 2544](https://tools.ietf.org/html/rfc2544) based, meaning 2 different tests
+  - testType: This has 2 options, simple or rfc (based on [RFC 2544](https://tools.ietf.org/html/rfc2544)), meaning 2 different tests
 
 #### System output
 
