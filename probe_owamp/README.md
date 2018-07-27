@@ -1,4 +1,8 @@
 # OWAMP (one-way active measurement protocol) to Prometheus
+
+<p align="center"><img src="https://github.com/sonata-nfv/tng-api-gtw/wiki/images/sonata-5gtango-logo-500px.png" /></p>
+
+
 OWAMP needs to be installed on both hosts taking part in the measurement. The owamp-prometheus-exporter should be installed at the destination host. From there when run, the source host of the one-way-ping can be chosen as an argument.
 
 Configure apt (as user “root”):

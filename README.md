@@ -8,8 +8,8 @@ The probes in this repository are developed and maintained by [Media Net Lab - N
 
 There are 3 different probes at the moment:
   - [moongen](https://github.com/sonata-nfv/tng-probes/tree/master/probe_moongen)
-  - uperf
-  - owamp
+  - [uperf](https://github.com/sonata-nfv/tng-probes/tree/master/probe_uperf)
+  - [owamp](https://github.com/sonata-nfv/tng-probes/tree/master/probe_owamp)
 
  They are part of the V&V sandbox enviroment of 5G-TANGO and they are used to test the Network Services that are deployed.
  
