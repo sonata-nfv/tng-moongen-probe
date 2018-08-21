@@ -1,0 +1,19 @@
+{
+    "Results": {
+        "RateRx": "connect",
+        "RateTx": "0",
+        "TotalRx": "Cannot",
+        "TotalTx": "0"
+    },
+    "TestConfig": {
+        "IpDst": "172.16.1.15",
+        "IpSrc": "172.16.1.18",
+        "PktSize": 43,
+        "PortDst": 0,
+        "PortSrc": 0,
+        "Size": 1,
+        "Time": 10
+    },
+    "TestID": "mytestid2",
+    "Timestamp": "1534857598.45"
+}

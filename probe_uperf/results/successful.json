@@ -1,0 +1,19 @@
+{
+    "Results": {
+        "RateRx": "2.76Mb/s",
+        "RateTx": "2.99Mb/s",
+        "TotalRx": "4.05MB",
+        "TotalTx": "4.39MB"
+    },
+    "TestConfig": {
+        "IpDst": "172.16.1.15",
+        "IpSrc": "172.16.1.18",
+        "PktSize": 43,
+        "PortDst": 0,
+        "PortSrc": 0,
+        "Size": 1,
+        "Time": 10
+    },
+    "TestID": "mytestid1",
+    "Timestamp": "1534855638.25"
+}
