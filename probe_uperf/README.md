@@ -5,7 +5,7 @@
 
 #### Description
 
-The UPERF probe is based on the uperf packet generator. It is fully scriptable and it works on high speeds, thus making it suitable for testing various network services. Specific tests for latency and bandwidth are available for the 5G-TANGO V&V Platform. This probe comes with a wrapper API that makes using the MoonGen packet generator automatic and easy. Also there is an automatic openflow-based way to perform traffic steering in OpenStack to guide the generated traffic toward and form the network service that is under test.
+The UPERF probe is based on the uperf network performance tool. A test for bandwidth is available for the 5G-TANGO V&V Platform. This probe comes with a wrapper API that makes using the uperf automatic and easy. Also there is an automatic openflow-based way to perform traffic steering in OpenStack to guide the generated traffic toward and form the network service that is under test.
 
 #### Files
 
