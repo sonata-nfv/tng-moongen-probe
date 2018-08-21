@@ -24,7 +24,7 @@ To invoke a test a REST HTTP POST request at 10.100.33.119/uperfstart.php is nee
   - testTime: time in seconds that the test will be executed
   - testID: random ID of the test to be executed
   - placeholder1: empty field for future use
-  - placeholder2: moongen port used to receive packets
+  - placeholder2: empty field for future use
   - testType: simple
 
 #### System output
@@ -42,22 +42,22 @@ Also a JSON file is produced containing all the measurements of the test. To see
 
 #### Installation
 
-moongen-agent-v3.py and moongentest.lua need to be in the folder of MoonGen. moongen-agent-v3.py needs to be edited in order to have correct IP and PORT depending on the configuration of your network.
+uperf-agent-v2.py and uperftest.xml need to be in the folder of uperf. uperf-agent-v2.py needs to be edited in order to have correct IP and PORT depending on the configuration of your network.
 
-To run moongen-agent-v3.py in the background use:
+To run uperf-agent-v2.py in the background use:
 
 ```sh
-$ nohup python moongen-agent-v3.py &
+$ nohup python uperf-agent-v2.py &
 ```
 
-The files in php-scripts folder must be available under a webserver in the moongen machine. (eg. Apache)
+The files in php-scripts folder must be available under a webserver in the uperf master machine. (eg. Apache)
 
-mg-agentMOONGEN.py need to be in the OpenStack machine and must be edited in order to have the correct port interfaces for the OpenStack deployemnt.
+mg-agentUPERF.py need to be in the OpenStack machine and must be edited in order to have the correct port interfaces for the OpenStack deployemnt.
 
-To run mg-agentMOONGEN.py in the background use:
+To run mg-agentUPERF.py in the background use:
 
 ```sh
-$ nohup python mg-agentMOONGEN.py &
+$ nohup python mg-agentUPERF.py &
 ```
 
 
