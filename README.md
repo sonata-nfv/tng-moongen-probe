@@ -10,6 +10,7 @@ There are 3 different probes at the moment:
   - [moongen](https://github.com/sonata-nfv/tng-probes/tree/master/probe_moongen)
   - [uperf](https://github.com/sonata-nfv/tng-probes/tree/master/probe_uperf)
   - [owamp](https://github.com/sonata-nfv/tng-probes/tree/master/probe_owamp)
+  - [wrk](https://github.com/sonata-nfv/tng-probes/tree/master/probe_wrk)
 
  They are part of the V&V sandbox enviroment of 5G-TANGO and they are used to test the Network Services that are deployed.
  
