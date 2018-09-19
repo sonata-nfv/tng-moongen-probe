@@ -4,7 +4,7 @@
 
 # Description
 
-The probes in this repository are developed and maintained by [Media Net Lab - NCSR Demokritos](http://www.medianetlab.gr/).
+The probes in this repository are developed and maintained by [Media Net Lab - NCSR Demokritos](http://medianetlab.gr/).
 
 There are 3 different probes at the moment:
   - [moongen](https://github.com/sonata-nfv/tng-probes/tree/master/probe_moongen)
